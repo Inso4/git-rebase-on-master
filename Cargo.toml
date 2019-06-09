@@ -1,0 +1,7 @@
+[package]
+name = "git_rebase_to_master"
+version = "0.1.0"
+authors = ["Daniel Corley <dcorley@manh.com>"]
+edition = "2018"
+
+[dependencies]
