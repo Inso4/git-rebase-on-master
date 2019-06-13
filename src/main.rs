@@ -3,8 +3,6 @@ use std::process;
 use std::process::Command;
 use std::process::Output;
 
-//todo: error output and exits
-//some reference: https://github.com/rhysd/git-brws/blob/master/src/git.rs
 fn main() {
     let dev_branch = unwrap_or_exit(get_curr_branch_name());
     println!("current branch: {}", dev_branch);
@@ -51,7 +49,6 @@ fn get_curr_branch_name() -> io::Result<Output> {
         .output()
 }
 
-//todo: add error printing and panic
 fn checkout_branch(branch_name: &str) -> io::Result<Output> {
     Command::new("git")
         .arg("checkout")
